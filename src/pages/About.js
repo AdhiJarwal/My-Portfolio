@@ -82,9 +82,9 @@ const About = () => {
   ];
 
   const certifications = [
-    { name: 'AWS Certified Developer - Associate (DVA-C02)', icon: <FaAws /> },
-    { name: 'AWS Certified AI Practitioner (AIF-C01)', icon: <FaAws /> },
-    { name: 'Terraform Certified Associate (HCTAO-003)', icon: <SiTerraform /> }
+    { name: 'AWS Certified Developer - Associate (DVA-C02)', icon: <FaAws />, link: 'https://www.credly.com/badges/58d41154-eb49-4ec8-98e7-4a3a55821b21/linked_in_profile' },
+    { name: 'AWS Certified AI Practitioner (AIF-C01)', icon: <FaAws />, link: 'https://www.credly.com/badges/1f857aa0-0a95-4ddb-a0d9-e0e2f87c419b/linked_in_profile' },
+    { name: 'Terraform Certified Associate (HCTAO-003)', icon: <SiTerraform />, link: 'https://www.credly.com/badges/1976b2ca-8632-493a-ad74-6181cc39fe25/linked_in_profile' }
   ];
 
   return (
@@ -169,9 +169,12 @@ const About = () => {
           <h2 className="text-4xl font-bold text-center mb-12" style={{ color: 'var(--color-primary-text)' }}>Certifications</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {certifications.map((cert, index) => (
-              <motion.div 
+              <motion.a 
                 key={index}
-                className="backdrop-blur-md flex items-center gap-4 p-6 rounded-xl border-2 hover:shadow-xl transition-all"
+                href={cert.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="backdrop-blur-md flex items-center gap-4 p-6 rounded-xl border-2 hover:shadow-xl transition-all cursor-pointer"
                 style={{ backgroundColor: 'var(--color-card-bg)', borderColor: 'var(--color-card-border)' }}
                 whileHover={{ scale: 1.02 }}
                 initial={{ opacity: 0, y: 20 }}
@@ -180,7 +183,7 @@ const About = () => {
               >
                 <span className="text-3xl" style={{ color: 'var(--color-accent)' }}>{cert.icon}</span>
                 <span className="text-lg font-medium" style={{ color: 'var(--color-primary-text)' }}>{cert.name}</span>
-              </motion.div>
+              </motion.a>
             ))}
           </div>
         </motion.section>
