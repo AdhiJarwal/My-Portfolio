@@ -1,9 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { FaGithub, FaLinkedin, FaMedium, FaAws, FaCloud } from 'react-icons/fa';
 
 const Home = () => {
+  const navigate = useNavigate();
+  
+  const handleNavigation = (path) => {
+    if (path !== '/') {
+      // For non-home pages, replace history with Home -> Current Page
+      window.history.replaceState(null, '', '/');
+      window.history.pushState(null, '', path);
+    }
+    navigate(path);
+  };
   return (
     <motion.div 
       className="min-h-screen pt-32 pb-20"
@@ -69,12 +79,12 @@ const Home = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            <Link to="/projects" className="btn btn-primary">
+            <button onClick={() => handleNavigation('/projects')} className="btn btn-primary">
               View Projects
-            </Link>
-            <Link to="/contact" className="btn btn-secondary">
+            </button>
+            <button onClick={() => handleNavigation('/contact')} className="btn btn-secondary">
               Get In Touch
-            </Link>
+            </button>
           </motion.div>
           
           <motion.div 
