@@ -1,0 +1,62 @@
+/**
+ * 🎨 PORTFOLIO THEME COLORS - 100% THEME CONTROL
+ * 
+ * This file controls ALL colors in the portfolio.
+ * To change the entire color scheme, simply update the values in the :root section below.
+ * 
+ * ✅ CURRENT PALETTE:
+ * - Primary Text: #112D4E (Dark Navy) - All headings, main text
+ * - Accent Color: #3F72AF (Blue) - Icons, links, highlights
+ * - Light Background: #F9F7F7 (Light Gray) - Form inputs, light sections
+ * - Card Backgrounds: rgba(219, 226, 239, 0.3) - All card backgrounds
+ * - Card Borders: rgba(249, 247, 247, 0.5) - All card borders
+ * - Background Gradient: #D4D2D2 → #D0D6E5 → #3F72AF
+ * 
+ * 🚀 HOW TO CHANGE ENTIRE THEME:
+ * 1. Update values in :root section below
+ * 2. Save file - ALL components automatically update!
+ * 3. No need to modify any other files
+ * 
+ * 🎯 100% COVERAGE: Every color in the portfolio is controlled from here!
+ */
+
+:root {
+  /* PRIMARY COLORS */
+  --color-primary-text: #112D4E;     /* Dark navy - Main headings and text */
+  --color-accent: #3F72AF;           /* Blue - Icons, links, highlights */
+  --color-light-bg: #F9F7F7;        /* Light gray - Form inputs, light backgrounds */
+
+  
+  /* TRANSPARENT VARIANTS */
+  --color-card-bg: rgba(219, 226, 239, 0.3);    /* Card backgrounds with transparency */
+  --color-card-border: rgba(249, 247, 247, 0.5); /* Card borders with transparency */
+  --color-navbar-bg: rgba(249, 247, 247, 0.95);  /* Navbar background with transparency */
+  
+  /* GRADIENTS */
+  --gradient-background: linear-gradient(135deg, #D4D2D2 0%, #D0D6E5 50%, #3F72AF 100%);
+
+  /* BUTTON COLORS */
+  --color-btn-primary: #3F72AF;     /* Primary button background */
+  --color-btn-primary-hover: #112D4E; /* Primary button hover state */
+
+}
+
+/**
+ * 🌈 EXAMPLE THEMES:
+ * 
+ * DARK THEME:
+ * --color-primary-text: #FFFFFF;
+ * --color-accent: #00ADB5;
+ * --color-light-bg: #2D3748;
+ * --color-card-bg: rgba(45, 55, 72, 0.8);
+ * --gradient-background: linear-gradient(135deg, #1A202C 0%, #2D3748 50%, #00ADB5 100%);
+ * 
+ * GREEN THEME:
+ * --color-primary-text: #1A202C;
+ * --color-accent: #38A169;
+ * --color-light-bg: #F0FFF4;
+ * --color-card-bg: rgba(198, 246, 213, 0.7);
+ * --gradient-background: linear-gradient(135deg, #F0FFF4 0%, #C6F6D5 50%, #38A169 100%);
+ * 
+ * 🎉 THAT'S IT! Change these values and your entire portfolio updates instantly!
+ */

@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import theme colors */
+@import '../theme/colors.css';
+
+@layer base {
+  html {
+    background: var(--gradient-background) !important;
+    background-attachment: fixed !important;
+    background-size: 100% 100vh !important;
+    background-repeat: no-repeat !important;
+    min-height: 100% !important;
+    height: 100% !important;
+  }
+  
+  body {
+    @apply font-sans;
+    background: var(--gradient-background) !important;
+    background-attachment: fixed !important;
+    background-size: 100% 100% !important;
+    background-repeat: no-repeat !important;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    height: 100%;
+  }
+  
+  body::before {
+    content: '';
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    right: 0;
+    bottom: -100vh;
+    background: var(--gradient-background);
+    z-index: -1;
+    pointer-events: none;
+  }
+  
+  #root {
+    min-height: 100vh;
+    background: var(--gradient-background) !important;
+    background-attachment: fixed !important;
+    position: relative;
+  }
+  
+  .home-bg {
+    background: var(--gradient-background);
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-block px-6 py-3 rounded-lg font-semibold text-center cursor-pointer transition-all duration-300;
+  }
+  
+  .btn-primary {
+    background: var(--color-btn-primary);
+    color: var(--color-light-bg);
+    @apply hover:-translate-y-0.5 hover:shadow-lg;
+  }
+  
+  .btn-primary:hover {
+    background: var(--color-btn-primary-hover);
+  }
+  
+  .btn-secondary {
+    background: transparent;
+    color: var(--color-accent);
+    border: 2px solid var(--color-accent);
+  }
+  
+  .btn-secondary:hover {
+    background: var(--color-accent);
+    color: var(--color-light-bg);
+  }
+  
+  .highlight {
+    color: var(--color-accent);
+  }
+}
+
+@layer utilities {
+  .animate-spin {
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@layer base {
+  input::placeholder,
+  textarea::placeholder {
+    color: #708090;
+    opacity: 0.7;
+  }
+}
