@@ -82,9 +82,9 @@ const About = () => {
   ];
 
   const certifications = [
-    { name: 'AWS Certified Developer - Associate (DVA-C02)', icon: <FaAws />, link: 'https://www.credly.com/badges/58d41154-eb49-4ec8-98e7-4a3a55821b21/linked_in_profile' },
-    { name: 'AWS Certified AI Practitioner (AIF-C01)', icon: <FaAws />, link: 'https://www.credly.com/badges/1f857aa0-0a95-4ddb-a0d9-e0e2f87c419b/linked_in_profile' },
-    { name: 'Terraform Certified Associate (HCTAO-003)', icon: <SiTerraform />, link: 'https://www.credly.com/badges/1976b2ca-8632-493a-ad74-6181cc39fe25/linked_in_profile' }
+    { name: 'AWS Certified Developer - Associate (DVA-C02)', icon: <FaAws />, link: 'https://www.credly.com/badges/58d41154-eb49-4ec8-98e7-4a3a55821b21/public_url' },
+    { name: 'AWS Certified AI Practitioner (AIF-C01)', icon: <FaAws />, link: 'https://www.credly.com/badges/1f857aa0-0a95-4ddb-a0d9-e0e2f87c419b/public_url' },
+    { name: 'Terraform Certified Associate (HCTAO-003)', icon: <SiTerraform />, link: 'https://www.credly.com/badges/1976b2ca-8632-493a-ad74-6181cc39fe25/public_url' }
   ];
 
   return (
