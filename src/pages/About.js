@@ -4,6 +4,24 @@ import { FaAws, FaDocker, FaLinux, FaReact, FaPython, FaHtml5, FaCss3Alt, FaNode
 import { SiTerraform, SiKubernetes, SiJenkins, SiGithubactions, SiMicrosoftazure, SiGrafana, SiCplusplus, SiGnubash } from 'react-icons/si';
 
 const About = () => {
+  // Calculate dynamic experience from start date
+  const calculateExperience = () => {
+    const startDate = new Date(2024, 0); // January 2024 (month 0)
+    const currentDate = new Date();
+    
+    // Calculate total months including the starting month
+    const totalMonths = (currentDate.getFullYear() - startDate.getFullYear()) * 12 + 
+                       (currentDate.getMonth() - startDate.getMonth()) + 1;
+    
+    const years = Math.floor(totalMonths / 12);
+    const months = totalMonths % 12;
+    
+    // Convert months to decimal: 9 months = 0.9 years
+    return years + (months * 0.1);
+  };
+  
+  const experienceYears = calculateExperience();
+
   const skillCategories = [
     {
       category: 'Cloud Platforms',
@@ -111,7 +129,7 @@ const About = () => {
             <div className="xl:col-span-3 backdrop-blur-md p-6 rounded-xl border-2" style={{ backgroundColor: 'var(--color-card-bg)', borderColor: 'var(--color-card-border)' }}>
               <div className="text-lg text-justify leading-relaxed space-y-6" style={{ color: 'var(--color-primary-text)' }}>
                 <p>
-                  I am a passionate Cloud Engineer and AWS Community Builder with 2 years of experience in designing and implementing scalable, secure, and high-performance cloud infrastructure. Currently at Searce Inc, I specialize in AWS and Azure platforms, with a strong focus on automation, security, and performance optimization.
+                  I am a passionate Cloud Engineer and AWS Community Builder with {experienceYears.toFixed(1)} years of experience in designing and implementing scalable, secure, and high-performance cloud infrastructure. Currently at Searce Inc, I specialize in AWS and Azure platforms, with a strong focus on automation, security, and performance optimization.
                 </p>
                 <p>
                   Holding a CGPA of 8.63 in Information Technology and multiple cloud certifications, I combine solid theoretical knowledge with hands-on experience to deliver impactful solutions. I am also dedicated to contributing to the global AWS community by sharing technical insights and creating meaningful content.
